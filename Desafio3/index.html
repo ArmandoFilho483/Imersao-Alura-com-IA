@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas | Imersão Alura com IA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-badge">Desafio 3 • Google Antigravity</div>
+      <h1>Minhas Tarefas</h1>
+      <p class="subtitle">Acompanhe suas atividades diárias com facilidade</p>
+    </header>
+
+    <!-- Formulário para Adicionar Tarefa -->
+    <form id="form-tarefa" class="task-form" autocomplete="off">
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="input-tarefa" 
+          placeholder="O que você precisa fazer hoje?" 
+          aria-label="Texto da nova tarefa"
+          required
+        >
+        <button type="submit" id="btn-adicionar" class="btn-primary" aria-label="Adicionar Tarefa">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          <span>Adicionar</span>
+        </button>
+      </div>
+      <span id="mensagem-validacao" class="validation-message" role="alert" aria-live="polite"></span>
+    </form>
+
+    <!-- Barra de Filtros e Estatísticas -->
+    <section class="task-controls" aria-label="Filtros e contadores">
+      <div class="filters" role="tablist">
+        <button type="button" class="filter-btn active" data-filter="todas" role="tab" aria-selected="true">
+          Todas <span id="count-todas" class="count-badge">0</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="pendentes" role="tab" aria-selected="false">
+          Pendentes <span id="count-pendentes" class="count-badge">0</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="concluidas" role="tab" aria-selected="false">
+          Concluídas <span id="count-concluidas" class="count-badge">0</span>
+        </button>
+      </div>
+
+      <button type="button" id="btn-limpar-concluidas" class="btn-secondary" title="Remover tarefas concluídas">
+        Limpar Concluídas
+      </button>
+    </section>
+
+    <!-- Lista de Tarefas -->
+    <main>
+      <ul id="lista-tarefas" class="task-list" aria-label="Lista de atividades">
+        <!-- Itens inseridos dinamicamente via app.js -->
+      </ul>
+
+      <!-- Estado Vazio -->
+      <div id="estado-vazio" class="empty-state hidden">
+        <div class="empty-icon">📝</div>
+        <h3>Nenhuma tarefa por aqui!</h3>
+        <p>Adicione uma nova tarefa no campo acima para começar seu dia.</p>
+      </div>
+    </main>
+
+    <!-- Rodapé Informativo -->
+    <footer class="app-footer">
+      <p>Desenvolvido com <strong>Google Antigravity</strong> • Imersão Alura com IA</p>
+    </footer>
+  </div>
+
+  <script src="todo_core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

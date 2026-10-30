@@ -24,6 +24,19 @@ Imersao-Alura-com-IA/
 │   ├── ARQUITETURA_E_EVOLUCAO.md     # Análise de engenharia de software e diagramas de fluxo
 │   └── .gitignore
 │
+├── Desafio3/                         # 📚 Desafio 3: Criando uma Lista de Tarefas com Google Antigravity
+│   ├── index.html                    # Interface Web semântica e responsiva
+│   ├── style.css                     # Estilos, distinção visual e efeito tachado
+│   ├── app.js                        # Controlador de interface e persistência localStorage
+│   ├── todo_core.js                  # Lógica de negócio e regras de domínio desacopladas
+│   ├── test_todo.js                  # 9 testes unitários automatizados com Node.js
+│   ├── app_desktop.py                # Versão desktop gráfica nativa em Python (Tkinter)
+│   ├── README.md                     # Documentação e relatório do Desafio 3
+│   ├── TESTES.md                     # Plano de testes e matriz de requisitos
+│   ├── RELATORIO_VERIFICACAO.md      # Evidências de execução e logs dos testes
+│   ├── ARQUITETURA_E_EXPLICACAO.md   # Desenho de arquitetura e diagramas mermaid
+│   └── .gitignore
+│
 ├── .gitignore                        # Regras de exclusão de artefatos temporários Python
 └── README.md                         # Índice geral do repositório
 ```
@@ -47,6 +60,15 @@ Imersao-Alura-com-IA/
   - [`Desafio2/TESTES.md`](./Desafio2/TESTES.md): Matriz de testes automatizados e critérios de aceitação.
   - [`Desafio2/RELATORIO_VERIFICACAO.md`](./Desafio2/RELATORIO_VERIFICACAO.md): Evidências reais de execução com 100% de aprovação nos testes.
   - [`Desafio2/ARQUITETURA_E_EVOLUCAO.md`](./Desafio2/ARQUITETURA_E_EVOLUCAO.md): Diagrama de fluxo (`mermaid`), análise de complexidade e boas práticas (SRP, Clean Code e programação defensiva).
+
+### [Desafio 3: Criando uma Lista de Tarefas com Google Antigravity](./Desafio3/README.md)
+* **Objetivo:** Construir do zero uma aplicação To-Do List visual completa com as 3 funcionalidades fundamentais: adicionar, concluir (com distinção visual evidente) e remover tarefas.
+* **Funcionalidades:** Suporte a versão Web e Desktop (Python Tkinter), filtros dinâmicos, contadores em tempo real e persistência.
+* **Documentos e Relatórios Técnicos:**
+  - [`Desafio3/README.md`](./Desafio3/README.md): Visão geral do desafio e recursos.
+  - [`Desafio3/TESTES.md`](./Desafio3/TESTES.md): Matriz de requisitos e cenários de teste.
+  - [`Desafio3/RELATORIO_VERIFICACAO.md`](./Desafio3/RELATORIO_VERIFICACAO.md): Logs de teste e evidências práticas.
+  - [`Desafio3/ARQUITETURA_E_EXPLICACAO.md`](./Desafio3/ARQUITETURA_E_EXPLICACAO.md): Desenho arquitetural, diagramas de fluxo e separação em camadas.
 
 ---
 
@@ -84,6 +106,19 @@ python calculadora.py
 cd ../Desafio2
 python -m unittest test_calculadora.py -v
 ```
+
+### 5. Executar o Desafio 3 (Lista de Tarefas)
+- **Versão Web:** Abra o arquivo `Desafio3/index.html` em qualquer navegador.
+- **Versão Desktop (Python):**
+  ```bash
+  cd ../Desafio3
+  python app_desktop.py
+  ```
+- **Testes Automatizados do Desafio 3:**
+  ```bash
+  cd ../Desafio3
+  node --test test_todo.js
+  ```
 
 ---
 
